@@ -1,0 +1,905 @@
+/* ---------------------- Section top-inner ---------------------- */
+section.top-inner {
+	background-color: #f8f8f8;
+	padding-top: 65px;
+	padding-bottom: 60px;
+	position: relative;
+	border-bottom: 25px solid #ededed;
+	.title {
+		@include f-m;
+		font-size: 64px;
+		line-height: 64px;
+		color: #18376c;
+		margin: 0;
+		text-align: center;
+	}
+	.breadcrumbs {
+		text-align: center;
+		margin-top: 10px;
+	}
+	.line {
+		@include f-r;
+		font-size: 10px;
+		color: #e63447;
+		
+		a {
+			@include f-r;
+			font-size: 18px;
+			color: #5a5a5a;
+			margin: 0 5px;
+		}
+		.breadcrumb_last {
+			@include f-m;
+			font-size: 18px;
+			color: #444444;
+			margin: 0 5px;
+		}
+	}
+
+	@media only screen and (max-width : 1200px) {
+		padding-top: 45px;
+		padding-bottom: 40px;
+		.title {
+			font-size: 40px;
+		}
+
+	}
+	@media only screen and (max-width : 650px) {
+		
+		padding-bottom: 20px;
+		.title {
+			font-size: 30px;
+			line-height: 30px;
+		}
+	}
+}
+/* --------------------- /Section top-inner ---------------------- */
+
+/* ---------------------- Section about-inner ---------------------- */
+section.about-inner {
+	padding-top: 80px;
+	padding-bottom: 75px;
+	overflow: visible;
+
+
+	.parts {
+		display: flex;	
+		.part {
+			width: 50%;
+		}
+
+		.part-text {
+			padding-left: 45px;
+			.title {
+				@include f-b;
+				font-size: 48px;
+				color: #18376c;
+			}
+
+			.content {
+				@include f-r;
+				font-size: 18px;
+				color: #000;
+				p {
+					margin-top: 20px;
+				}
+				
+			}
+		}
+
+		.part-image {
+			position: relative;
+			img {
+				position: absolute;
+				top: -50px;
+				right: 45px;
+				max-width: 150%;
+
+				@media only screen and (max-width : 1600px) {
+					max-width: 115%;
+				}
+				@media only screen and (max-width : 1200px) {
+					top: 0;
+				}
+			}
+		}
+	}
+	
+	@media only screen and (max-width : 1200px) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		.parts {
+			.part-text {
+				.title {
+					font-size: 35px;
+				}
+				.content {
+					font-size: 16px;					
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width : 850px) {
+		padding-bottom: 0;
+		padding-top: 0;
+		.title {
+			font-size: 24px;
+			margin-bottom: 0;
+		}
+		.parts {
+			margin-top: 55px;
+			flex-wrap: wrap;
+			.part {
+				width: 100%;
+			}
+
+			.part-image {
+				margin-top: 25px;
+				img {
+					position: static;
+					max-width: 100%;
+				}
+			}
+
+			.part-text {
+				padding-left: 0px;
+			}
+		}
+	}
+}
+/* --------------------- /Section about-inner ---------------------- */
+
+/* ---------------------- Section content-columns ---------------------- */
+section.content-columns {
+	.section-inner {
+		background: #f8f8f8;
+		max-width: 1375px;
+	}
+	.parts {
+		display: flex;
+		.part {
+			width: 50%;
+			padding: 70px;
+			.title {
+				@include f-b;
+				font-size: 20px;
+				color: #000;
+			}
+
+			.content {
+				@include f-r;
+				font-size: 18px;
+				color: #000;
+				p {
+					margin-top: 20px;
+				}
+				
+			}
+		}
+	}
+
+	@media only screen and (max-width : 1200px) {
+		.parts {
+			.part {
+				padding: 50px;
+				.title {
+					font-size: 20px;
+				}
+				.content {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width : 750px) {
+		.parts {
+			flex-wrap: wrap;
+			padding: 15px 0;
+			.part {
+				width: 100%;
+				padding: 25px;
+				.title {
+					font-size: 20px;
+				}
+				.content {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+/* --------------------- /Section content-columns ---------------------- */
+
+/* ---------------------- Section feedback ---------------------- */
+section.feedback {
+	margin-top: 35px;
+	.slider {
+		.owl-dots {
+			span {
+				transition: 0.5s;
+				background: #18376C;
+			}
+			.active span, &:hover span {
+				background: #E63447;
+			}
+		}
+		.item {
+			.parts {
+				display: flex;
+				.part {
+					width: 50%;
+				}
+				.part-right {
+					img {
+						width: 100%;
+					}
+				}
+				.part-left {
+					background: #f8f8f8;
+					position: relative;	
+					.inner {
+						position: absolute;
+						top: 50%;
+						left: 10%;
+						right: 10%;
+						transform: translateY(-50%);
+						text-align: center;
+					}
+
+					.title {
+						@include f-m;
+						font-size: 25px;
+						color: #000;
+					}
+					.content {
+						margin-top: 20px;
+						@include f-r;
+						font-size: 18px;
+						color: #000;
+					}
+					.stars {
+						margin-top: 25px;
+						.star {
+							display: inline-block;
+							vertical-align: middle;
+							margin: 0 5px;
+							&.star-full {
+								color: #18376c;
+							}
+							&.star-empty {
+								color: #bfbfbf;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width : 1200px) {
+		.slider {
+			.item {
+				.parts {
+					.part-left {
+						.title {
+							font-size: 20px;
+						}
+						.content {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width : 850px) {
+		margin-top: 15px;
+		.slider {
+			.item {
+
+				.parts {
+					flex-wrap: wrap;
+					.part {
+						width: 100%;
+					}
+					.part-left {
+						margin-top: 15px;
+						.inner {
+							transform: none;
+							position: static;
+							padding: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}
+/* --------------------- /Section feedback ---------------------- */
+
+/* ---------------------- Section advantages ---------------------- */
+section.advantages {
+	padding: 70px 0;
+	.icons {
+		display: flex;
+		justify-content: center;
+		margin-top: 60px;
+		.icon {
+			text-align: center;
+			margin: 0 5%;
+			.image {
+				height: 80px;
+			}
+			.text {
+				@include f-b;
+				font-size: 20px;
+				color: #e63447;
+			}
+		}
+	}
+
+	@media only screen and (max-width : $mob-w) {
+		padding:25px 0;
+		.icons {
+			margin-top: 25px;
+			.icon {
+				.image {
+					height: 50px;
+					img {
+						height: 50px;
+					}
+				}
+				.text {
+					font-size: 18px;
+					line-height: 18px;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+/* --------------------- /Section advantages ---------------------- */
+
+/* ---------------------- Section content-top ---------------------- */
+section.content-top {
+	padding: 65px 0;
+	.title {
+		@include f-b;
+		font-size: 48px;
+		color: #18376c;
+	}
+
+	.content {
+		@include f-r;
+		font-size: 18px;
+		color: #000;
+		margin-top: 25px;
+	}
+
+	@media only screen and (max-width : 1200px) {
+		padding: 45px 0;
+		.title {
+			font-size: 35px;
+		}
+
+		.content {
+			font-size: 16px;
+			margin-top: 15px;
+		}
+	}
+
+	@media only screen and (max-width : $mob-w) {
+		padding: 25px 0;
+		.title {
+			font-size: 28px;
+		}
+	}
+}
+/* --------------------- /Section content-top ---------------------- */
+
+
+/* ---------------------- Section product-single ---------------------- */
+
+section.product-single {
+	padding-top: 45px;
+	padding-bottom: 85px;
+	overflow: visible;
+	.parts {
+		display: flex;
+
+		.part {
+			width: 50%;
+			position: relative;
+		}
+	}
+
+	.part-info {
+		font-size: 0;
+		padding-right: 75px;
+		position: relative;
+		.share {
+			position: absolute;
+			left: 0;
+			top: -30px;
+			transform-origin: 0 0;
+			transform: scale(0.8);
+		}
+		.title {
+			@include f-b;
+			font-size: 48px;
+			line-height: 48px;
+			color: #18376c;
+		}
+
+		.sku {
+			@include f-m;
+			font-size: 17px;
+			color: #333232;
+			margin-top: 10px;
+		}
+		.price {
+			@include f-b;
+			font-size: 20px;
+			color: #18376c;
+			margin-top: 30px;
+		}
+		.qty, .quantity {
+
+			@include f-b;
+			font-size: 20px;
+			color: #18376c;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.quantity {
+			max-width: 50px;
+			
+			input {
+				width: 100%;
+				margin-right: 10px;
+			}
+		}
+		.woocommerce-product-details__short-description, .content {
+			@include f-r;
+			font-size: 18px;
+			color: #000;
+			margin-top: 20px;
+			strong {
+				@include f-b;
+			}
+		}
+
+		.product-addon-totals {
+			li {
+				display: none;
+				&.wc-pao-subtotal-line {
+					display: block;
+					border-top: none;
+					margin-top: 0;
+					.price {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+
+		@media only screen and (max-width : 1200px) {
+			.title {
+				font-size: 28px;
+			}
+			.sku { 
+				margin-top: 5px;
+			}
+
+			.price {
+				font-size: 20px;
+				margin-top: 20px;
+			}
+
+			.woocommerce-product-details__short-description, .content {
+				font-size: 16px;
+			}
+			 
+		}
+		
+		.cart {
+			margin-top: 30px;
+		}
+
+
+		select {
+			position: relative;
+		
+			width: 100%;
+			@include f-r;
+			font-size: 18px;
+			color: #838383;
+			
+			border: none;
+			outline: none;
+			padding: 15px 20px;
+
+			padding-left: 55px;
+			-webkit-appearance: none;
+		    -moz-appearance: none;
+			text-indent: 1px;
+			text-overflow: '';
+			background: url("../images/icons/ar-d-s.png") no-repeat left 20px center;
+			background-color: #f8f8f8;
+			opacity: 1;
+			transition: 0.5s;
+			margin-top: 10px;
+			&.disabled {
+				display: none;
+				//opacity: 0.5;
+				//pointer-events: none;
+			}
+		}
+
+		.single_add_to_cart_button, .button-checkout {
+	
+			position: relative;
+			@include f-m;
+			font-size: 17px;
+			color: #fff;
+			background: #e63447;
+			text-align: center;
+			padding: 20px 50px;
+			border: none;
+			transition: 0.5s;
+			margin-top: 45px;
+
+			cursor: pointer;
+			border-radius: 5px;
+			display: block;
+			&:hover {
+				background:#18376C;
+			}
+		}
+
+		.button-checkout {
+			margin-left: 0;
+			background: #e6c488;
+			color: #231f20;
+
+			&:hover {
+				color: #fff;
+			}
+		}
+		
+	}
+
+	.part-images {
+
+		.main {
+		
+			flex-grow: 1;
+			img {
+				width: 100%;
+			}
+		}
+		.thumbs {
+			display: flex;
+			margin: -2%;
+			margin-top: 20px;
+			font-size: 0;
+			.thumb {
+				font-size: 0;
+				width: 100%;
+				
+				cursor: pointer;
+				border: 2px solid #fff;
+				transition: 0.5s;
+				margin: 2%;
+				&.selected {
+					border: 2px solid #18376c;
+				}
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width : 900px) {
+		padding-bottom: 25px;
+		.parts {
+			flex-wrap: wrap;
+			.part {
+				width: 100%;
+			}
+		}
+		.part-info {
+			padding-right: 0;
+			.panel-top {
+				transform-origin: 0 0;
+				transform: scale(0.7);
+			}
+		}
+		.part-images {
+			margin-top: 25px;
+			.thumbs {
+				margin-right: 3%;
+			}
+		}
+	}
+}
+
+/* ---------------------- /Section product-single ---------------------- */
+
+/* ---------------------- Section title-section ---------------------- */
+section.title-section {
+	padding: 20px 0;
+	.title {
+		@include f-b;
+		font-size: 48px;
+		color: #18376c;
+		text-align: center;
+	}
+
+	@media only screen and (max-width : $mob-w) {
+		
+		.title {
+			font-size: 28px;
+		}
+	}
+}
+/* --------------------- /Section title-section ---------------------- */
+
+/* ---------------------- Section post ---------------------- */
+section.post {
+	padding: 35px 0;
+	.content {
+		@include f-r;
+		font-size: 18px;
+		color: #000;
+		text-align: right;
+		p {
+			margin-top: 20px;
+		}
+	}
+
+	@media only screen and (max-width : $mob-w) {
+		padding: 15px 0;
+		.content {
+			font-size: 16px;
+			p {
+				margin-top: 15px;
+			}
+		}
+	}
+}
+/* --------------------- /Section post ---------------------- */
+
+
+/* ---------------------- Section reviews ---------------------- */
+section.reviews {
+	padding-bottom: 55px;
+	.items {
+		font-size: 0;
+		.item {
+			&:nth-child(even) {
+				.parts {
+					flex-direction: row-reverse;
+				}
+			}
+			.parts {
+				display: flex;
+
+				.part {
+					width: 50%;
+				}
+				.part-right {
+					img {
+						width: 100%;
+					}
+				}
+				.part-left {
+					background: #f8f8f8;
+					position: relative;	
+					.inner {
+						position: absolute;
+						top: 50%;
+						left: 10%;
+						right: 10%;
+						transform: translateY(-50%);
+						text-align: center;
+					}
+
+					.title {
+						@include f-m;
+						font-size: 25px;
+						color: #000;
+					}
+					.content {
+						margin-top: 20px;
+						@include f-r;
+						font-size: 18px;
+						color: #000;
+					}
+					.stars {
+						margin-top: 25px;
+						font-size: 18px;
+						.star {
+							display: inline-block;
+							vertical-align: middle;
+							margin: 0 5px;
+							&.star-full {
+								color: #18376c;
+							}
+							&.star-empty {
+								color: #bfbfbf;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width : 1200px) {
+		.items {
+			.item {
+				.parts {
+					.part-left {
+						.title {
+							font-size: 20px;
+						}
+						.content {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width : 850px) {
+		padding-bottom: 15px;
+		.items {
+			.item {
+
+				.parts {
+					flex-wrap: wrap;
+					.part {
+						width: 100%;
+					}
+					.part-left {
+						margin-top: 15px;
+						.inner {
+							transform: none;
+							position: static;
+							padding: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* --------------------- /Section reviews ---------------------- */
+
+/* ---------------------- Section contact ---------------------- */
+section.contact {
+	padding: 80px 0;
+
+	.title {
+		@include f-b;
+		font-size: 48px;
+		color: #18376c;
+	}
+	.subtitle {
+		@include f-b;
+		font-size: 22px;
+		color: #e63447;
+	}
+
+	.parts {
+		display: flex;
+		margin-top: 60px;
+		.part {
+			width: 50%;
+
+			.inner {
+				background: #f8f8f8;
+				padding: 35px;
+				position: relative;
+			}
+			.marker {
+				
+				position: absolute;
+				top: -50px;
+				left: 0;
+			}
+			.title {
+				@include f-b;
+				font-size: 28px;
+				color: #18376c;
+			}
+			.content {
+				@include f-r;
+				font-size: 18px;
+				color: #000;
+				margin-top: 20px;
+				strong {
+					color: #18376c;
+				}
+			}
+		}
+		.part-right {
+			padding-left: 40px;
+		}
+		.part-left {
+			padding-right: 40px;
+		}
+	}
+
+	@media only screen and (max-width : $mob-w) {
+		padding: 35px 0;
+
+		.title {
+			font-size: 35px;
+		}
+		.subtitle {;
+			font-size: 18px;
+		}
+
+		.parts {
+			margin-top: 60px;
+			.part {
+				.inner {
+					padding: 20px;
+				}
+				.marker {
+					width: 50px;
+					top: -25px;
+					left: 15px;
+				}
+				.title {
+					font-size: 24px;
+				}
+				.content {
+					font-size: 16px;
+					margin-top: 10px;
+				}
+			}
+			.part-right {
+				padding-left: 20px;
+			}
+			.part-left {
+				padding-right: 20px;
+			}
+		}
+	}
+
+	@media only screen and (max-width : 750px) {
+		padding: 25px 0;
+		.parts {
+			flex-wrap: wrap;
+			margin-top: 10px;
+			.part {
+				width: 100%;
+				margin-top: 25px;
+
+				.marker {
+					width: 30px;
+					top: -15px;
+					left: 15px;
+				}
+			}
+
+			.part-right {
+				padding-left: 0px;
+			}
+			.part-left {
+				padding-right: 0px;
+			}
+		}
+	}
+}
+/* --------------------- /Section contact ---------------------- */
