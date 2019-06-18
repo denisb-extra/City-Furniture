@@ -1692,6 +1692,18 @@ section.product-single {
       section.product-single .part-info .quantity input {
         width: 100%;
         margin-right: 10px; }
+    section.product-single .part-info .read-more {
+      font-family: 'Rubik', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      color: #E63447;
+      margin-top: 20px;
+      cursor: pointer;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      text-decoration: underline; }
+      section.product-single .part-info .read-more:hover {
+        color: #000; }
     section.product-single .part-info .woocommerce-product-details__short-description, section.product-single .part-info .content {
       font-family: 'Rubik', sans-serif;
       font-weight: 400;
@@ -1701,6 +1713,14 @@ section.product-single {
       section.product-single .part-info .woocommerce-product-details__short-description strong, section.product-single .part-info .content strong {
         font-family: 'Rubik', sans-serif;
         font-weight: 700; }
+      section.product-single .part-info .woocommerce-product-details__short-description p, section.product-single .part-info .content p {
+        margin-top: 20px; }
+      section.product-single .part-info .woocommerce-product-details__short-description ul, section.product-single .part-info .content ul {
+        list-style: disc;
+        margin-top: 15px; }
+        section.product-single .part-info .woocommerce-product-details__short-description ul li, section.product-single .part-info .content ul li {
+          margin-right: 25px;
+          margin-top: 5px; }
     section.product-single .part-info .product-addon-totals li {
       display: none; }
       section.product-single .part-info .product-addon-totals li.wc-pao-subtotal-line {

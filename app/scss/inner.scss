@@ -408,6 +408,7 @@ section.product-single {
 	padding-top: 45px;
 	padding-bottom: 85px;
 	overflow: visible;
+	
 	.parts {
 		display: flex;
 
@@ -463,6 +464,18 @@ section.product-single {
 				margin-right: 10px;
 			}
 		}
+		.read-more {
+			@include f-r;
+			font-size: 18px;
+			color: #E63447;
+			margin-top: 20px;
+			cursor: pointer;
+			transition: 0.5s;
+			text-decoration: underline;
+			&:hover {
+				color: #000;
+			}
+		}
 		.woocommerce-product-details__short-description, .content {
 			@include f-r;
 			font-size: 18px;
@@ -470,6 +483,17 @@ section.product-single {
 			margin-top: 20px;
 			strong {
 				@include f-b;
+			}
+			p {
+				margin-top: 20px;
+			}
+			ul {
+				list-style: disc;
+				margin-top: 15px;
+				li {
+					margin-right: 25px;
+					margin-top: 5px;
+				}
 			}
 		}
 
